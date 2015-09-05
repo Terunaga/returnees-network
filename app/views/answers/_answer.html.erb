@@ -1,0 +1,13 @@
+<section class="col-md-12">
+  <div class="comment_box">
+    <div class="sct_inner">
+      <div class="commentor">
+        <p><strong><%= link_to answer.user.name, user_path(answer.user) %>さん</strong></p>
+        <time>commented <%= time_ago_in_words answer.created_at %> ago</time>
+      </div>
+      <div class="comment_content">
+        <p><%= answer.answer %></p>
+      </div>
+    </div>
+  </div>
+</section>

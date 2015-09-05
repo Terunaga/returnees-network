@@ -1,0 +1,43 @@
+<div class="contents_row">
+  <div class="answer_area">
+    <div class="col-lg-12">
+      <%= form_for(@answer) do |f| %>
+      <h4><%= link_to "#{@question.user.name}", user_path(@question.user) %>さんの質問にコメントする</h4>
+      <div class="comment_theme_area">
+        <div class="theme_theme"><p><strong>テーマ</strong></p></div>
+        <div class="theme_text"><p><%= @question.theme %></p></div>
+      </div>
+      <div class="comment_content_area">
+        <div class="question_question"><p><strong>投稿内容</strong></p></div>
+        <div class="question_text"><p><%= @question.question %></p></div>
+      </div>
+
+      <div class="answer_area_area">
+        <div class="form_group">
+          <%= f.text_area :answer, placeholder: "コメントを入力してください", cols:"30", rows:"10", autofocus: "true", class:"form_control", required: true %>
+        </div>
+      </div>
+        <%= f.hidden_field :question_id %>
+        <div class="comments_to_question">
+        <%= f.submit "コメント" %>
+        </div>
+        <% end %>
+    </div>
+
+    <% if @question.answers.present? %>
+      <h4>この質問へのコメント</h4>
+      <%= render partial:"answers/answer", collection: @answers %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+

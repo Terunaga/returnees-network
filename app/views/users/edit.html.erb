@@ -1,0 +1,209 @@
+<div class="contents_row">
+  <div class="info_update">
+    <div class="col-xs-12">
+      <%= form_for current_user do |f| %>
+        <h2>プロフィール画像</h2>
+        <div class="form-group file">
+          <%= f.file_field :avatar, class: 'form-control floating-label', placeholder: '画像アップロード' %>
+        </div>
+
+        <h2>登録情報</h2>
+        <p>*は必須項目です</p>
+        <div class="form-group">
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *性：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :family_name, placeholder: '姓', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *名：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :first_name, placeholder: '名', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *セイ：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :family_name_kana, placeholder: 'セイ', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *メイ：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :first_name_kana, placeholder: 'メイ', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *ニックネーム：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :nickname, placeholder: 'ニックネーム', class: 'form-control', :maxlength => 5, required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *性別：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :gender, Settings.gender, class: 'form-control', :prompt =>"選択", required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *国：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :country, placeholder: '国', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *滞在期間：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :duration, placeholder: '滞在期間', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *帰国予定日程：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :return_date, placeholder: '帰国予定日程', class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *自己紹介：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :introduction, placeholder: '自己紹介', class: 'form-control', :maxlength => 104, required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              facebook：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :facebook, placeholder: 'facebookのURL', class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              twitter：
+            </div>
+            <div class="label_content">
+              <%= f.text_field :twitter, placeholder: 'twitterのURL', class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *学問体系：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :study_field, Settings.study_field, class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *志望大学①：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :university_one, Settings.university, class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望大学②：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :university_two, Settings.university, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望大学③：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :university_three, Settings.university, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望大学④：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :university_four, Settings.university, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望大学⑤：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :university_five, Settings.university, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              *志望学部①：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :faculty_one, Settings.faculty, class: 'form-control', required: true %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望学部②：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :faculty_two, Settings.faculty, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望学部③：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :faculty_three, Settings.faculty, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望学部④：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :faculty_four, Settings.faculty, class: 'form-control' %>
+            </div>
+          </div>
+          <div class = "each_label clearfix">
+            <div class="label_name">
+              志望学部⑤：
+            </div>
+            <div class="label_content position_fix">
+              <%= f.select :faculty_five, Settings.faculty, class: 'form-control' %>
+            </div>
+          </div>
+
+
+
+          <div class="col-xs-12">
+            <div class="submit_button">
+              <%= f.submit "送信", :class => 'btn btn-primary withripple' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

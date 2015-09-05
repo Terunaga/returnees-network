@@ -1,0 +1,19 @@
+<div class="contents_row">
+  <div class="post_area">
+    <%= form_for(@question) do |f| %>
+      <h4>投稿する</h4>
+      <div class="theme_area">
+        <%= f.text_field :theme, placeholder: "テーマ", autofocus: "true", class:"form_control", size: 55, required: true %>
+      </div>
+      <div class="question_area">
+        <%= f.text_area :question, placeholder: "内容を入力してください", cols:"30", rows:"10", autofocus: "true", class:"form_control", required: true %>
+      </div>
+
+      <div class="comments_to_question">
+        <%= f.submit "投稿" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

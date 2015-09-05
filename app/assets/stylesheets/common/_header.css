@@ -1,0 +1,14 @@
+.navbar{
+  background-color: #006699;
+}
+.container .navbar-header .navbar-brand{
+  color: white;
+  font-size: 30px;
+}
+.nav li a{
+  color: white !important;
+}
+.dropdown-menu{
+  background-color: #006699;
+  color:black !important;
+}

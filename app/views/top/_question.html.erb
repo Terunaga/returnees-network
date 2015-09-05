@@ -1,0 +1,40 @@
+<div class="col-xs-12 col-sm-6 col-md-6 ">
+  <div class="thumbnail">
+    <div class="profile_box clearfix">
+      <div class="image" style="background-image: url(<%= question.user.avatar.url(:medium) %>);"></div>
+      <div class="self_top">
+        <p><%= link_to "#{question.user.name}", user_path(question.user) %> (<%= question.user.nickname %>)</p>
+        <p>滞在国：<%= question.user.country %></p>
+        <p>学問体系：<%= question.user.study_field %></p>
+        <p>志望大学：<%= question.user.university_one %></p>
+        <p>志望学部：<%= question.user.faculty_one %></p>
+      </div>
+      <div class="self_intro">
+        <p><%= question.user.introduction %></p>
+      </div>
+    </div>
+
+    <div class="question_contents">
+      <div class="theme_band">
+        <div class="theme_theme"><p><strong>テーマ</strong></p></div>
+        <div class="theme_text"><p><%= question.theme %></p></div>
+      </div>
+      <div class="question_band">
+        <div class="question_question"><p><strong>投稿内容</strong></p></div>
+        <div class="question_text"><p><%= question.question %></p></div>
+      </div>
+      <div class="comment_band">
+        <div class="posted_time"><time>posted <%= time_ago_in_words question.created_at %> ago</time>
+        </div>
+        <div class="num_of_comments"><%= question.answers.count %>件のコメント
+        </div>
+        <div class="post_comment">
+          <%= form_tag(new_answer_path, method: :get) do %>
+          <%= hidden_field_tag(:question_id, question.id) %>
+          <%= submit_tag("コメント") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
- <div class="contents_row">
-   <div class="container">
-    <% unless current_user.minimum_profile? %>
+<div class="contents_row">
+  <div class="container">
     <div class="row">
+
       <div class="site_introduction">
         <%= image_tag("site_introduction.jpg", :class => "image_index") %>
         <div class="site_introduction_contents">
@@ -9,30 +9,14 @@
           <h3 class="site_introduction_contents_bottom">このサイトは、世界中の帰国生を繋げて情報共有をするためのサービスです。</h3>
         </div>
       </div>
-    </div>
-      <!-- <header class="header_top panel panel-default col-lg-12 no-profile"> -->
-    <div class="edit_profile">
-      <h2>まずは、あなたの基本プロフィールを登録しましょう！</h2>
-      <div><%= link_to 'プロフィールを登録する', edit_user_path(current_user.id), { class: 'btn btn-lg btn-primary withripple' } %></div>
-    </div>
-      <!-- </header> -->
-    <% else %>
-      <div class="row">
-          <div class="site_introduction">
-            <%= image_tag("site_introduction.jpg", :class => "image_index") %>
-            <div class="site_introduction_contents">
-              <h1 class="site_introduction_contents_top">Returnees Network へようこそ！</h1>
-              <h3 class="site_introduction_contents_bottom">このサイトは、世界中の帰国生を繋げて情報共有をするためのサービスです。</h3>
-            </div>
-      </div>
-
 
       <div class="row">
-        <%= render :partial => "question", :collection => @questions %>
+      <%= render :partial => "question", :collection => @questions %>
+      <%= paginate(@questions) %>
       </div>
 
-
-    <% end %>
+    </div>
   </div>
 </div>
+
 

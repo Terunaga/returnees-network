@@ -1,19 +1,36 @@
 <div class="contents_row">
-  <div class="post_area">
-    <%= form_for(@question) do |f| %>
-      <h4>投稿する</h4>
-      <div class="theme_area">
-        <%= f.text_field :theme, placeholder: "テーマ", autofocus: "true", class:"form_control", size: 55, required: true %>
+  <div class="container">
+    <% unless current_user.minimum_profile? %>
+      <div class="row">
+        <div class="site_introduction">
+          <%= image_tag("site_introduction.jpg", :class => "image_index") %>
+          <div class="site_introduction_contents">
+            <h1 class="site_introduction_contents_top">Returnees Network へようこそ！</h1>
+            <h3 class="site_introduction_contents_bottom">このサイトは、世界中の帰国生を繋げて情報共有をするためのサービスです。</h3>
+          </div>
+        </div>
       </div>
-      <div class="question_area">
-        <%= f.text_area :question, placeholder: "内容を入力してください", cols:"30", rows:"10", autofocus: "true", class:"form_control", required: true %>
+      <div class="edit_profile">
+        <h2>まずは、あなたの基本プロフィールを登録しましょう！</h2>
+        <div><%= link_to 'プロフィールを登録する', edit_user_path(current_user.id), { class: 'btn btn-lg btn-primary withripple' } %>
+        </div>
       </div>
 
-      <div class="comments_to_question">
-        <%= f.submit "投稿" %>
+    <% else %>
+      <div class="post_area">
+        <%= form_for(@question) do |f| %>
+        <h4>投稿する</h4>
+        <div class="theme_area">
+          <%= f.text_field :theme, placeholder: "テーマ", autofocus: "true", class:"form_control", size: 55, required: true %>
+        </div>
+        <div class="question_area">
+          <%= f.text_area :question, placeholder: "内容を入力してください", cols:"30", rows:"10", autofocus: "true", class:"form_control", required: true %>
+        </div>
+        <div class="comments_to_question">
+          <%= f.submit "投稿" %>
+        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
 </div>
-
-

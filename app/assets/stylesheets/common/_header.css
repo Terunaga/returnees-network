@@ -12,3 +12,20 @@
   background-color: #006699;
   color:black !important;
 }
+.login_main, .signin_main{
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+.login_boss{
+  height:450px;
+}
+.login_content{
+  margin: 25px;
+}
+.signin_boss{
+  height: 450px;
+}
+.signin_content{
+  margin: 25px;
+}

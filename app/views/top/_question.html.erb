@@ -1,7 +1,11 @@
 <div class="col-xs-12 col-sm-6 col-md-6 ">
   <div class="thumbnail">
     <div class="profile_box clearfix">
+      <% unless question.user.avatar.present? %>
+      <div class="image" style="background-image: url(http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg);"></div>
+      <% else %>
       <div class="image" style="background-image: url(<%= question.user.avatar.url(:medium) %>);"></div>
+      <% end %>
       <div class="self_top">
         <p><%= link_to "#{question.user.name}", user_path(question.user) %> (<%= question.user.nickname %>)</p>
         <p>滞在国：<%= question.user.country %></p>

@@ -1,16 +1,138 @@
 <div class="contents_row">
-  <h4><strong><%= @user.nickname %></strong>さんのユーザーページです。</h4>
-  <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div>
-  <h3><%= @user.name %><h3>
-  <h3><%= @user.name_kana %></h3>
-  <h3><%= @user.nickname %></h3>
-  <h3><%= @user.gender %></h3>
-  <h3><%= @user.country %></h3>
-  <h3><%= @user.duration %></h3>
-  <h3><%= @user.return_date %></h3>
-  <h3><%= @user.introduction %></h3>
-  <h3><a href="<%= @user.facebook %>"><%= @user.facebook %></a></h3>
-  <h3><a href="<%= @user.twitter %>"><%= @user.twitter %></a></h3>
-  <h3><%= @user.university %></h3>
-  <h3><%= @user.faculty %></h3>
+  <div class="profile_user">
+    <h3>〜〜〜<strong><%= @user.nickname %></strong>さんのユーザーページ〜〜〜</h3>
+    <time>Profile updated <%= time_ago_in_words @user.updated_at %> ago</time>
+
+    <% if @user.avatar.present? %>
+    <div class="pic clearfix">
+      <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">名前： </div>
+      <div class="profile_user_right"><%= @user.name %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">ナマエ： </div>
+      <div class="profile_user_right"><%= @user.name_kana %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">ニックネーム： </div>
+      <div class="profile_user_right"><%= @user.nickname %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">性別： </div>
+      <div class="profile_user_right"><%= @user.gender %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">滞在国： </div>
+      <div class="profile_user_right"><%= @user.country %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">滞在期間： </div>
+      <div class="profile_user_right"><%= @user.duration %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">帰国予定日程： </div>
+      <div class="profile_user_right"><%= @user.return_date %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">facebook： </div>
+      <div class="profile_user_right"><a href="<%= @user.facebook %>"><%= @user.nickname %>さんの facebook</a></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">twitter： </div>
+      <div class="profile_user_right"><a href="<%= @user.twitter %>"><%= @user.nickname %>さんの twitter</a></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">志望大学： </div>
+      <div class="profile_user_right">
+        <div><%= @user.university_one %></div>
+        <div><%= @user.university_two %></div>
+        <div><%= @user.university_three %></div>
+        <div><%= @user.university_four %></div>
+        <div><%= @user.university_five %></div>
+      </div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">志望学部： </div>
+      <div class="profile_user_right">
+        <div><%= @user.faculty_one %></div>
+        <div><%= @user.faculty_two %></div>
+        <div><%= @user.faculty_three %></div>
+        <div><%= @user.faculty_four %></div>
+        <div><%= @user.faculty_five %></div>
+      </div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">自己紹介： </div>
+      <div class="profile_user_right_special"><%= @user.introduction %></div>
+    </div>
+
+    <% else %>
+    <div class="pic clearfix">
+      <div class="image" style="background-image: url(http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg);"></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">名前： </div>
+      <div class="profile_user_right"><%= @user.name %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">ナマエ： </div>
+      <div class="profile_user_right"><%= @user.name_kana %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">ニックネーム： </div>
+      <div class="profile_user_right"><%= @user.nickname %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">性別： </div>
+      <div class="profile_user_right"><%= @user.gender %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">滞在国： </div>
+      <div class="profile_user_right"><%= @user.country %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">滞在期間： </div>
+      <div class="profile_user_right"><%= @user.duration %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">帰国予定日程： </div>
+      <div class="profile_user_right"><%= @user.return_date %></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">facebook： </div>
+      <div class="profile_user_right"><a href="<%= @user.facebook %>"><%= @user.nickname %>さんの facebook</a></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">twitter： </div>
+      <div class="profile_user_right"><a href="<%= @user.twitter %>"><%= @user.nickname %>さんの twitter</a></div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">志望大学： </div>
+      <div class="profile_user_right">
+        <div><%= @user.university_one %></div>
+        <div><%= @user.university_two %></div>
+        <div><%= @user.university_three %></div>
+        <div><%= @user.university_four %></div>
+        <div><%= @user.university_five %></div>
+      </div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">志望学部： </div>
+      <div class="profile_user_right">
+        <div><%= @user.faculty_one %></div>
+        <div><%= @user.faculty_two %></div>
+        <div><%= @user.faculty_three %></div>
+        <div><%= @user.faculty_four %></div>
+        <div><%= @user.faculty_five %></div>
+      </div>
+    </div>
+    <div class="profile_user_boss clearfix">
+      <div class="profile_user_left">自己紹介： </div>
+      <div class="profile_user_right_special"><%= @user.introduction %></div>
+    </div>
+    <% end %>
+
+  </div>
 </div>

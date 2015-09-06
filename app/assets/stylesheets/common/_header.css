@@ -14,18 +14,21 @@
 }
 .login_main, .signin_main{
   width: 500px;
-  margin: 100px auto;
+  margin: 0 auto;
   text-align: center;
 }
-.login_boss{
-  height:450px;
-}
 .login_content{
-  margin: 25px;
-}
-.signin_boss{
-  height: 450px;
+  margin: 5px;
 }
 .signin_content{
-  margin: 25px;
+  margin: 5px;
+}
+/*.signin_boss{
+  height: 450px;
+}*/
+/*.login_boss{
+  height:450px;
+}*/
+.contents_row_special{
+  padding: 5px 0 0 0;
 }

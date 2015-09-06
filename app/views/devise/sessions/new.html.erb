@@ -1,6 +1,21 @@
+<div class="contents_row_special">
+  <div class="container">
+    <div class="row">
+
+      <div class="site_introduction">
+        <%= image_tag("site_introduction.jpg", :class => "image_index") %>
+        <div class="site_introduction_contents">
+          <h1 class="site_introduction_contents_top">Returnees Network へようこそ！</h1>
+          <h3 class="site_introduction_contents_bottom">このサイトは、世界中の帰国生を繋げて情報共有をするためのサービスです。</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <div class="login_boss">
   <div class="login_main">
-    <h1>Log in</h1>
+    <h2>Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field login_content">
@@ -27,4 +42,6 @@
 
     <%= render "devise/shared/links" %>
   </div>
+</div>
+
 </div>

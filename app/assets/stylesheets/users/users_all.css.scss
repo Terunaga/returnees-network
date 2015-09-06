@@ -1,0 +1,130 @@
+.info_update{
+  text-align: center;
+}
+.image{
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  background-position: center;
+}
+.info_update{
+  width: 600px;
+  margin: 0 auto;
+}
+.info_update h2{
+  text-align: center;
+}
+.form-group .col-xs-12{
+  margin: 5px 0;
+}
+.btn.btn-primary.withripple{
+  text-align: center;
+}
+.submit_button{
+  width:100px;
+  margin:0 auto;
+}
+.post_area{
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.answer_area{
+  width: 430px;
+  margin: 0 auto;
+  text-align: center;
+}
+.theme_area, .question_area{
+  margin: 20px 0 20px 0;
+  min-width: 400px;
+}
+.theme_area{
+  border: 1px solid #D2B48C;
+  border-radius: 4px;
+}
+textarea{
+  min-width: 400px;
+  border: 2px solid #D2B48C;
+  border-radius: 4px;
+}
+h4{
+  margin: 30px 0 0 0;
+}
+.comment_theme_area, .comment_content_area{
+  margin: 20px 0 20px 0;
+  border: 2px solid #D2B48C;
+  border-radius: 4px;
+  padding: 10px 15px 10px 15px;
+  text-align: left;
+}
+textarea{
+  max-width: 400px;
+}
+.comments_to_question{
+  padding: 10px 0 40px 0;
+}
+.comment_box{
+  margin: 20px 0 0 0;
+  border: 2px solid #D2B48C;
+  border-radius: 4px;
+  padding: 10px 15px 0 15px;
+  text-align: left;
+}
+.comment_box p{
+  margin: 0;
+}
+.comment_content{
+  margin: 10px 0 10px 0;
+}
+.label_name{
+  padding: 7px 0 0 0;
+  min-width: 130px;
+  float:left;
+  text-align: left;
+  margin: 0 0 0 50px;
+}
+.label_content{
+  float:left;
+  width: 250px;
+  margin: 0 auto;
+}
+.special{
+  width: 250px;
+}
+.position_fix{
+  margin: 7px 0 0 0;
+}
+.each_label{
+  margin: 10px 0 10px 0;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.profile_user{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.profile_user_left{
+  float: left;
+  width:200px;
+  text-align: left;
+}
+.profile_user_right{
+  float: left;
+  width: 600px;
+  text-align: left;
+}
+.profile_user_right_special{
+  float:left;
+  
+}
+.pic{
+  margin: 0 0 20px 310px;
+}
+.profile_user_boss{
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}

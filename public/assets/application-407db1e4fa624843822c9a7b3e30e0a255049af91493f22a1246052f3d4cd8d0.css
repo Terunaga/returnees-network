@@ -6813,6 +6813,23 @@ button.close {
   background-color: #006699;
   color:black !important;
 }
+.login_main, .signin_main{
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+.login_boss{
+  height:450px;
+}
+.login_content{
+  margin: 25px;
+}
+.signin_boss{
+  height: 450px;
+}
+.signin_content{
+  margin: 25px;
+}
 /* line 9, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/top/top_all.css.scss */
 .theme_band, .question_band {
   border: 1px solid #c0c0c0;
@@ -6961,96 +6978,195 @@ body {
 .theme_text p {
   margin: 0;
 }
-.info_update{
+/* line 1, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.info_update {
   text-align: center;
 }
-.image{
+
+/* line 4, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.image {
   height: 150px;
   width: 150px;
   background-size: cover;
   background-position: center;
 }
-.info_update{
+
+/* line 10, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.info_update {
   width: 600px;
   margin: 0 auto;
 }
-.info_update h2{
+
+/* line 14, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.info_update h2 {
   text-align: center;
 }
-.form-group .col-xs-12{
+
+/* line 17, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.form-group .col-xs-12 {
   margin: 5px 0;
 }
-.btn.btn-primary.withripple{
+
+/* line 20, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.btn.btn-primary.withripple {
   text-align: center;
 }
-.submit_button{
-  width:100px;
-  margin:0 auto;
+
+/* line 23, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.submit_button {
+  width: 100px;
+  margin: 0 auto;
 }
-.post_area{
+
+/* line 27, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.post_area {
   width: 400px;
   margin: 0 auto;
   text-align: center;
 }
-.answer_area{
+
+/* line 32, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.answer_area {
   width: 430px;
   margin: 0 auto;
   text-align: center;
 }
-.theme_area, .question_area{
+
+/* line 37, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.theme_area, .question_area {
   margin: 20px 0 20px 0;
   min-width: 400px;
 }
-.theme_area{
+
+/* line 41, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.theme_area {
   border: 1px solid #D2B48C;
   border-radius: 4px;
 }
-textarea{
+
+/* line 45, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+textarea {
   min-width: 400px;
   border: 2px solid #D2B48C;
   border-radius: 4px;
 }
-h4{
+
+/* line 50, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+h4 {
   margin: 30px 0 0 0;
 }
-.comment_theme_area, .comment_content_area{
+
+/* line 53, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.comment_theme_area, .comment_content_area {
   margin: 20px 0 20px 0;
   border: 2px solid #D2B48C;
   border-radius: 4px;
   padding: 10px 15px 10px 15px;
   text-align: left;
 }
-textarea{
+
+/* line 60, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+textarea {
   max-width: 400px;
 }
-.comments_to_question{
+
+/* line 63, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.comments_to_question {
   padding: 10px 0 40px 0;
 }
-.comment_box{
+
+/* line 66, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.comment_box {
   margin: 20px 0 0 0;
   border: 2px solid #D2B48C;
   border-radius: 4px;
   padding: 10px 15px 0 15px;
   text-align: left;
 }
-.comment_box p{
+
+/* line 73, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.comment_box p {
   margin: 0;
 }
-.comment_content{
+
+/* line 76, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.comment_content {
   margin: 10px 0 10px 0;
 }
-.label_name{
+
+/* line 79, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.label_name {
   padding: 7px 0 0 0;
-  float:left;
+  min-width: 130px;
+  float: left;
+  text-align: left;
+  margin: 0 0 0 50px;
 }
-.label_content{
-  float:left;
+
+/* line 86, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.label_content {
+  float: left;
+  width: 250px;
+  margin: 0 auto;
 }
-.position_fix{
+
+/* line 91, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.special {
+  width: 250px;
+}
+
+/* line 94, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.position_fix {
   margin: 7px 0 0 0;
 }
-.each_label{
+
+/* line 97, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.each_label {
   margin: 10px 0 10px 0;
+}
+
+/* line 100, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 105, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.profile_user {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 110, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.profile_user_left {
+  float: left;
+  width: 200px;
+  text-align: left;
+}
+
+/* line 115, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.profile_user_right {
+  float: left;
+  width: 600px;
+  text-align: left;
+}
+
+/* line 120, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.profile_user_right_special {
+  float: left;
+}
+
+/* line 123, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.pic {
+  margin: 0 0 20px 310px;
+}
+
+/* line 126, /Users/Terunaga/projects/returnees_network/app/assets/stylesheets/users/users_all.css.scss */
+.profile_user_boss {
+  margin: 0 0 20px 0;
+  font-size: 18px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
